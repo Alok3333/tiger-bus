@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global styles for Material-UI components */
+.MuiTextField-root .MuiOutlinedInput-root {
+  font-size: 16px;
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover {
+  border-color: #ff8e53;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root.Mui-focused {
+  border-color: #ff8e53;
+  box-shadow: 0 0 0 3px rgba(255, 142, 83, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.MuiSelect-root {
+  font-size: 16px;
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.MuiSelect-root:hover {
+  border-color: #ff8e53;
+}
+
+.MuiSelect-root.Mui-focused {
+  border-color: #ff8e53;
+  box-shadow: 0 0 0 3px rgba(255, 142, 83, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}

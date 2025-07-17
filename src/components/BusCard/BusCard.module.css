@@ -1,0 +1,255 @@
+.busCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  border-left: 6px solid #0058e4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.busCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.busCard.expanded {
+  border-left: 6px solid #ff6b6b;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 0;
+  font-weight: 600;
+}
+
+.busType {
+  background: #0058e4;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.busInfo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.busInfo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: #888;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.value {
+  font-weight: 600;
+  color: #333;
+}
+
+.subValue {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.stopsInfo {
+  background: #f0f4ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #e65100;
+}
+
+.bookingOptions {
+  display: flex;
+  gap: 10px;
+}
+
+.bookButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  font-weight: 600;
+}
+
+.callButton {
+  background: #ff6b6b;
+  color: white;
+}
+
+.callButton:hover {
+  background: #e55a5a;
+}
+
+.whatsappButton {
+  background: #25D366;
+  color: white;
+}
+
+.whatsappButton:hover {
+  background: #128C7E;
+}
+
+.extraDetails {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.extraDetails.expanded {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.extraDetails h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+.extraDetails p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.seatLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+  max-width: 200px;
+}
+
+.seat {
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.seat.available {
+  background: #d4edda;
+  cursor: pointer;
+  color: #155724;
+}
+
+.seat.available:hover {
+  background: #c3e6cb;
+}
+
+.seat.booked {
+  background: #f8d7da;
+  color: #721c24;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background: #cce5ff;
+  color: #004085;
+}
+
+@media (max-width: 768px) {
+  .busInfo {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .bookingOptions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .bookButton {
+    justify-content: center;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .busType {
+    align-self: flex-start;
+  }
+  
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
